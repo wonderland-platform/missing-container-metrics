@@ -8,13 +8,13 @@ For motivation and implementation details please refer to [blog post](https://ww
 ## TL;DR;
 
 ```bash
-$ helm repo add missing-container-metrics https://draganm.github.io/missing-container-metrics
+$ helm repo add missing-container-metrics https://jimdo.github.io/missing-container-metrics
 $ helm install missing-container-metrics missing-container-metrics/missing-container-metrics
 ```
 
 ## Adding Helm repo to your Helm client
 ```bash
-$ helm repo add missing-container-metrics https://draganm.github.io/missing-container-metrics
+$ helm repo add missing-container-metrics https://jimdo.github.io/missing-container-metrics
 ```
 
 ## Installing the Chart
