@@ -48,3 +48,9 @@ useContainerd: true
 nodeSelector: {}
   # Specify on which nodes this should run. E.g.
   # company.com/nodegroup: "prometheus"
+
+# tolerations:
+# - key: "key1"
+#   operator: "Equal"
+#   value: "value1"
+#   effect: "NoSchedule"
