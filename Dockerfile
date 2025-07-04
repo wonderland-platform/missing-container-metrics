@@ -1,4 +1,4 @@
-FROM golang:1.16-alpine3.12 as build
+FROM golang:1.24-alpine3.22 as build
 
 RUN mkdir /missing-container-metrics
 WORKDIR /missing-container-metrics
