@@ -22,7 +22,7 @@ spec:
         effect: NoSchedule
       containers:
       - name: missing-container-metrics
-        image: dmilhdef/missing-container-metrics:v0.14.0
+        image: dmilhdef/missing-container-metrics:v0.21.0
         resources:
           limits:
             memory: 20Mi
