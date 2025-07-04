@@ -4,7 +4,7 @@ go 1.24
 
 require (
 	github.com/containerd/containerd v1.4.4
-	github.com/containerd/typeurl v1.0.1
+	github.com/containerd/typeurl v1.0.2
 	github.com/docker/docker v1.13.1
 	github.com/pkg/errors v0.9.1
 	github.com/prometheus/client_golang v1.7.1
