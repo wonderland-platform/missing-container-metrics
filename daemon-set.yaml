@@ -22,7 +22,7 @@ spec:
         effect: NoSchedule
       containers:
       - name: missing-container-metrics
-        image: dmilhdef/missing-container-metrics:v0.14.0
+        image: ghcr.io/wonderland-platform/missing-container-metrics:1.0.0-rc2
         resources:
           limits:
             memory: 20Mi
