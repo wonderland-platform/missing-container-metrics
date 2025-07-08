@@ -42,7 +42,8 @@ The easiest way of installing `missing-container-metrics` in your kubernetes clu
 ### Docker
 
 ```sh
-$ docker run -d -p 3001:3001 -v /var/run/docker.sock:/var/run/docker.sock dmilhdef/missing-container-metrics:v0.14.0
+$ docker run -d -p 3001:3001 -v /var/run/docker.sock:/var/run/docker.sock ghcr.io/wonderland-platform/missing-container-metrics:1.0.0-rc3
+
 ```
 
 ## Usage
