@@ -106,6 +106,13 @@ One can see it as a shortcut to joining with the `kube_pod_container_info` metri
 
 Contributions are welcome, send your issues and PRs to this repo.
 
+## Releasing
+
+1. Push tag with new version: E.g.: `git tag -a -m "Version 1.0.0" v1.0.0 && git push origin 1.0.0`
+1. Wait for release of new container image
+1. Update helm chart with new image version: Edit [charts/missing-container-metrics/Chart.yaml](./charts/missing-container-metrics/Chart.yaml)
+1. Merge helm chart update PR to main branch
+
 ## License
 
 [MIT](LICENSE) - Copyright Dragan Milic and contributors
