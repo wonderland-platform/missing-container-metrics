@@ -3,10 +3,8 @@
 # Declare variables to be passed into your templates.
 
 image:
-  repository: ghcr.io/wonderland-platform/missing-container-metrics:1.0.0-rc3
+  repository: ghcr.io/wonderland-platform/missing-container-metrics
   pullPolicy: IfNotPresent
-  # Overrides the image tag whose default is the chart appVersion.
-  tag: "v0.21.0"
 
 imagePullSecrets: []
 nameOverride: ""
