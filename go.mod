@@ -3,7 +3,7 @@ module github.com/wonderland-platform/missing-container-metrics
 go 1.24
 
 require (
-	github.com/containerd/containerd v1.7.28
+	github.com/containerd/containerd v1.7.29
 	github.com/containerd/containerd/api v1.9.0
 	github.com/containerd/typeurl/v2 v2.2.3
 	github.com/docker/docker v28.5.1+incompatible
