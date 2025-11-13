@@ -34,7 +34,7 @@ $ helm install my-release-name missing-container-metrics/missing-container-metri
 | nameOverride       | Override the generated chart name. Defaults to .Chart.Name.     |                                                                  |
 | fullnameOverride   | Override the generated release name. Defaults to .Release.Name. |                                                                  |
 | podAnnotations     | Annotations for the started pods                                | `{"prometheus.io/scrape": "true", "prometheus.io/port": "3001"}` |
-| podLabels          | Labels for the started pods                                     |                                                                  |
+| podLabels          | Labels for the started pods                                     | `{}`                                                             |
 | podSecurityContext | Set the security context for the pods                           |                                                                  |
 | priorityClassName  | Name of the existing priority class to be used by  pod(s)       | `""`                                                             |
 | securityContext    | Set the security context for the container in the pods          |                                                                  |
