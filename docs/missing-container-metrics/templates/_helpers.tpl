@@ -48,6 +48,9 @@ Selector labels
 {{- define "missing-container-metrics.selectorLabels" -}}
 app.kubernetes.io/name: {{ include "missing-container-metrics.name" . }}
 app.kubernetes.io/instance: {{ .Release.Name }}
+{{- with .Values.podLabels }}
+{{ toYaml . }}
+{{- end }}
 {{- end }}
 
 {{/*
