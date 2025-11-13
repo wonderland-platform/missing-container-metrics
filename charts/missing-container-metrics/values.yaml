@@ -15,6 +15,10 @@ podAnnotations:
   prometheus.io/scrape: "true"
   prometheus.io/port: "3001"
 
+podLabels: {}
+  # additional labels for pod e.g.
+  # team: "platform"
+
 
 podSecurityContext: {}
   # fsGroup: 2000
