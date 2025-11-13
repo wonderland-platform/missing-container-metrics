@@ -25,19 +25,20 @@ $ helm install my-release-name missing-container-metrics/missing-container-metri
 
 ## Configuration
 
-| Parameter                                             | Description                                                       | Default                                                           |
-|-------------------------------------------------------|-------------------------------------------------------------------|-------------------------------------------------------------------|
-| image.repository                                      | missing-container-metrics image name                              | `dmilhdef/missing-container-metrics`                              |
-| image.pullPolicy                                      | pull policy for the image                                         | `IfNotPresent`                                                    |
-| image.tag                                             | tag of the missing-container-metrics image                        | `v0.21.0`                                                         |
-| imagePullSecrets                                      | pull secrets for the image                                        | `[]`                                                              |
-| nameOverride                                          | Override the generated chart name. Defaults to .Chart.Name.       |                                                                   |
-| fullnameOverride                                      | Override the generated release name. Defaults to .Release.Name.   |                                                                   |
-| podAnnotations                                        | Annotations for the started pods                                  | `{"prometheus.io/scrape": "true", "prometheus.io/port": "3001"}`  |
-| podSecurityContext                                    | Set the security context for the pods                             |                                                                   |
-| priorityClassName                                     | Name of the existing priority class to be used by  pod(s)         | `""`                                                              |
-| securityContext                                       | Set the security context for the container in the pods            |                                                                   |
-| resources                                             | CPU/memory resource requests/limits                               | `{}`                                                              |
-| tolerations                                           | Tolerations used for pod scheduling                               | 
-| useDocker                                             | If true, container info is obtained from Docker                   | `false`                                                           |
-| useContainerd                                         | If true, container info is obtained from Containerd               | `true`                                                            |
+| Parameter          | Description                                                     | Default                                                          |
+|--------------------|-----------------------------------------------------------------|------------------------------------------------------------------|
+| image.repository   | missing-container-metrics image name                            | `dmilhdef/missing-container-metrics`                             |
+| image.pullPolicy   | pull policy for the image                                       | `IfNotPresent`                                                   |
+| image.tag          | tag of the missing-container-metrics image                      | `v0.21.0`                                                        |
+| imagePullSecrets   | pull secrets for the image                                      | `[]`                                                             |
+| nameOverride       | Override the generated chart name. Defaults to .Chart.Name.     |                                                                  |
+| fullnameOverride   | Override the generated release name. Defaults to .Release.Name. |                                                                  |
+| podAnnotations     | Annotations for the started pods                                | `{"prometheus.io/scrape": "true", "prometheus.io/port": "3001"}` |
+| podLabels          | Labels for the started pods                                     | `{}`                                                             |
+| podSecurityContext | Set the security context for the pods                           |                                                                  |
+| priorityClassName  | Name of the existing priority class to be used by  pod(s)       | `""`                                                             |
+| securityContext    | Set the security context for the container in the pods          |                                                                  |
+| resources          | CPU/memory resource requests/limits                             | `{}`                                                             |
+| tolerations        | Tolerations used for pod scheduling                             |                                                                  | 
+| useDocker          | If true, container info is obtained from Docker                 | `false`                                                          |
+| useContainerd      | If true, container info is obtained from Containerd             | `true`                                                           |
