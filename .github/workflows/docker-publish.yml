@@ -62,6 +62,6 @@ jobs:
         helm package charts/missing-container-metrics
 
     - name: Push Helm chart to OCI registry
-      if : github.event_name == 'push' && startsWith(github.ref, 'refs/tags/')
+      if : github.event_name == 'push' && startsWith(github.ref, 'refs/branches/main')
       run: |
         helm push missing-container-metrics-*.tgz oci://${{ env.REGISTRY }}/wonderland-platform/helm
