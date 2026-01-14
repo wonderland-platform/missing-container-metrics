@@ -1,0 +1,32 @@
+name: Publish Helm Chart
+
+on:
+  push:
+    branches: [ main ]
+
+env:
+  REGISTRY: ghcr.io
+
+jobs:
+  build-and-push:
+    runs-on: ubuntu-latest
+    permissions:
+      contents: read
+      packages: write
+    steps:
+    - name: Setup helm
+      uses: azure/setup-helm@v4
+      with:
+        version: v3.17.0
+
+    - name: Checkout repository
+      uses: actions/checkout@v6
+
+    - name: Login helm to registry
+      run: |
+        echo "${{ secrets.GITHUB_TOKEN }}" | helm registry login ${{ env.REGISTRY }} --username ${{ github.actor }} --password-stdin
+
+    - name: Package and Push Helm chart
+      run: |
+        helm package charts/missing-container-metrics
+        helm push missing-container-metrics-*.tgz oci://${{ env.REGISTRY }}/wonderland-platform/helm
