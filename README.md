@@ -108,7 +108,7 @@ Contributions are welcome, send your issues and PRs to this repo.
 
 ## Releasing
 
-1. Push tag with new version: E.g.: `git tag -a -m "Version 1.0.0" v1.0.0 && git push origin 1.0.0`
+1. Push tag with new version: E.g.: `git tag -a -m "Version 1.2.2" v1.2.2 && git push origin v1.2.2`
 1. Wait for release of new container image
 1. Update helm chart with new image version: Edit [charts/missing-container-metrics/Chart.yaml](./charts/missing-container-metrics/Chart.yaml)
 1. Merge helm chart update PR to main branch
