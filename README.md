@@ -36,13 +36,21 @@ Both options should cover most of common use cases (EKS, GKE, K3S, Digital Ocean
 
 ### Kubernetes
 
-The easiest way of installing `missing-container-metrics` in your kubernetes cluster is using our [helm chart](https://artifacthub.io/packages/helm/missing-container-metrics/missing-container-metrics).
+The easiest way of installing `missing-container-metrics` in your kubernetes cluster is using our
+[helm chart](./charts/missing-container-metrics), which is published as an OCI artifact to the
+GitHub Container Registry:
 
+```sh
+$ kubectl create namespace missing-container-metrics
+$ helm install missing-container-metrics \
+    oci://ghcr.io/wonderland-platform/helm/missing-container-metrics \
+    -n missing-container-metrics
+```
 
 ### Docker
 
 ```sh
-$ docker run -d -p 3001:3001 -v /var/run/docker.sock:/var/run/docker.sock ghcr.io/wonderland-platform/missing-container-metrics:1.0.0-rc3
+$ docker run -d -p 3001:3001 -v /var/run/docker.sock:/var/run/docker.sock ghcr.io/wonderland-platform/missing-container-metrics:1.2.2
 
 ```
 

@@ -8,20 +8,28 @@ For motivation and implementation details please refer to [blog post](https://ww
 ## TL;DR;
 
 ```bash
-$ helm repo add missing-container-metrics https://wonderland-platform.github.io/missing-container-metrics
-$ helm install missing-container-metrics missing-container-metrics/missing-container-metrics
+$ helm install missing-container-metrics oci://ghcr.io/wonderland-platform/helm/missing-container-metrics
 ```
 
-## Adding Helm repo to your Helm client
+## Chart location
+
+The chart is published as an OCI artifact to the GitHub Container Registry at
+`oci://ghcr.io/wonderland-platform/helm/missing-container-metrics`. There is no classic Helm
+repository to add — Helm 3.8 and newer can install from the OCI reference directly.
+
+To inspect the available versions:
 ```bash
-$ helm repo add missing-container-metrics https://wonderland-platform.github.io/missing-container-metrics
+$ helm show chart oci://ghcr.io/wonderland-platform/helm/missing-container-metrics
 ```
 
 ## Installing the Chart
 ```bash
 $ kubectl create namespace missing-container-metrics
-$ helm install my-release-name missing-container-metrics/missing-container-metrics -n missing-container-metrics
+$ helm install my-release-name oci://ghcr.io/wonderland-platform/helm/missing-container-metrics \
+    -n missing-container-metrics
 ```
+
+To pin a specific chart version, add `--version <chart-version>`.
 
 ## Configuration
 
@@ -29,7 +37,7 @@ $ helm install my-release-name missing-container-metrics/missing-container-metri
 |-------------------------------------------------------|-------------------------------------------------------------------|-------------------------------------------------------------------|
 | image.repository                                      | missing-container-metrics image name                              | `ghcr.io/wonderland-platform/missing-container-metrics`           |
 | image.pullPolicy                                      | pull policy for the image                                         | `IfNotPresent`                                                    |
-| image.tag                                             | tag of the missing-container-metrics image                        | `v0.21.0`                                                         |
+| image.tag                                             | tag of the missing-container-metrics image                        | chart `appVersion`                                                |
 | imagePullSecrets                                      | pull secrets for the image                                        | `[]`                                                              |
 | nameOverride                                          | Override the generated chart name. Defaults to .Chart.Name.       |                                                                   |
 | fullnameOverride                                      | Override the generated release name. Defaults to .Release.Name.   |                                                                   |
