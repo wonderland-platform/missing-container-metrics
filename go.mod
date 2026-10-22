@@ -4,7 +4,7 @@ go 1.26.5
 
 require (
 	github.com/containerd/containerd v1.7.36
-	github.com/containerd/containerd/api v1.11.1
+	github.com/containerd/containerd/api v1.12.0
 	github.com/containerd/typeurl/v2 v2.3.0
 	github.com/docker/docker v28.5.2+incompatible
 	github.com/pkg/errors v0.9.1
@@ -61,7 +61,7 @@ require (
 	github.com/prometheus/common v0.72.0 // indirect
 	github.com/prometheus/procfs v0.22.0 // indirect
 	github.com/russross/blackfriday/v2 v2.1.0 // indirect
-	github.com/sirupsen/logrus v1.9.4 // indirect
+	github.com/sirupsen/logrus v1.10.2 // indirect
 	github.com/xrash/smetrics v0.0.0-20250705151800-55b8f293f342 // indirect
 	go.opencensus.io v0.24.0 // indirect
 	go.opentelemetry.io/auto/sdk v1.2.1 // indirect
