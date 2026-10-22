@@ -3,9 +3,9 @@ package containerd
 import (
 	"context"
 
-	"github.com/containerd/containerd"
-	"github.com/containerd/containerd/defaults"
-	"github.com/containerd/containerd/namespaces"
+	containerd "github.com/containerd/containerd/v2/client"
+	"github.com/containerd/containerd/v2/defaults"
+	"github.com/containerd/containerd/v2/pkg/namespaces"
 	"github.com/containerd/typeurl/v2"
 	"github.com/pkg/errors"
 	"go.uber.org/zap"
